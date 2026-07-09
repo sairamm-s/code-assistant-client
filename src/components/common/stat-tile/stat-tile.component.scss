@@ -1,0 +1,17 @@
+.stat-tile {
+  background: var(--surface-container);
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+
+  &__label {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    margin-bottom: var(--space-xs);
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

@@ -1,7 +1,11 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import repositoryReducer from './repository.slice';
+import chatReducer from './chat.slice';
 
-// slice reducers added by /feature (repository.slice.ts, chat.slice.ts per docs/PLAN.md Section 6)
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  repository: repositoryReducer,
+  chat: chatReducer,
+});
 
 export const store = configureStore({
   reducer: rootReducer,

@@ -1,0 +1,42 @@
+.file-upload {
+  border: 1px dashed var(--outline);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  margin: var(--space-lg) 0;
+  transition: border-color 0.15s ease;
+
+  &--drag {
+    border-color: var(--primary);
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--surface-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    color: var(--primary);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 var(--space-xs);
+  }
+
+  &__hint {
+    color: var(--on-surface-variant);
+    font-size: 13px;
+    margin: 0 0 var(--space-md);
+  }
+
+  &__error {
+    color: var(--error);
+    font-size: 13px;
+    margin: 0 0 var(--space-md);
+  }
+}

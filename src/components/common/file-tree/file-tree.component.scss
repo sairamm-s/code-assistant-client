@@ -1,0 +1,50 @@
+.file-tree {
+  width: 240px;
+  border-right: 1px solid var(--outline);
+  padding: var(--space-md);
+  overflow-y: auto;
+
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+    margin-bottom: var(--space-sm);
+  }
+
+  &__empty {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--on-surface-variant);
+    font-family: var(--font-code);
+    font-size: 12px;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: var(--surface-container);
+    }
+
+    &--active {
+      background: var(--surface-container);
+      color: var(--on-surface);
+    }
+  }
+
+  &__item-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
