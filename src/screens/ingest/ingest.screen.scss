@@ -1,0 +1,36 @@
+.ingest-screen {
+  min-height: 100vh;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--surface-container);
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 var(--space-xs);
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+    margin: 0 0 var(--space-lg);
+  }
+
+  &__error {
+    color: var(--error);
+    font-size: 13px;
+    margin-top: var(--space-md);
+  }
+}

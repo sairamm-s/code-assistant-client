@@ -1,0 +1,32 @@
+.retrieval-context-panel {
+  width: 260px;
+  border-left: 1px solid var(--outline);
+  padding: var(--space-md);
+
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+    margin-bottom: var(--space-md);
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: var(--space-md);
+
+    strong {
+      color: var(--primary);
+    }
+  }
+
+  &__chunk {
+    font-family: var(--font-code);
+    font-size: 11px;
+    color: var(--on-surface-variant);
+    padding: var(--space-xs) 0;
+    overflow-wrap: break-word;
+  }
+}

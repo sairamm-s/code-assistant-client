@@ -1,0 +1,54 @@
+:root {
+  // Surface (dark neutral scale)
+  --surface-base: #0a0a0a;
+  --surface-container: #171717;
+  --surface-container-high: #262626;
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #c2c6d6;
+  --outline: #262626;
+
+  // Accent
+  --primary: #3b82f6;
+  --on-primary: #ffffff;
+
+  // Semantic
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  // Typography
+  --font-body: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  // Shape
+  --radius-sm: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  // Spacing
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--surface-base);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
