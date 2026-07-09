@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GitBranch, Upload } from 'lucide-react';
+import { Upload } from 'lucide-react';
 import NavBarComponent from '../../components/common/nav-bar/nav-bar.component';
 import ButtonComponent from '../../components/common/button/button.component';
 import RecentRepositoriesComponent from '../../components/common/recent-repositories/recent-repositories.component';
@@ -40,13 +40,9 @@ const LandingScreen = () => {
         </h1>
         <p className="landing-screen__subtitle">{STRINGS.landing.subtitle}</p>
         <div className="landing-screen__actions">
-          <ButtonComponent onClick={() => navigate('/ingest?tab=upload')}>
+          <ButtonComponent onClick={() => navigate('/ingest')}>
             <Upload size={16} strokeWidth={1.5} />
             {STRINGS.landing.uploadCta}
-          </ButtonComponent>
-          <ButtonComponent variant="secondary" onClick={() => navigate('/ingest?tab=github')}>
-            <GitBranch size={16} strokeWidth={1.5} />
-            {STRINGS.landing.githubCta}
           </ButtonComponent>
         </div>
         <RecentRepositoriesComponent repositories={repositories} onSelect={handleSelectRepository} />

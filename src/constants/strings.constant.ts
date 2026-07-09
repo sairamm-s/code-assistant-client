@@ -8,15 +8,12 @@ export const STRINGS = {
     headingAccent: 'Codebase',
     headingSuffix: 'with AI',
     subtitle:
-      'Paste a GitHub repository or upload a ZIP and instantly ask questions about the code. Navigate complex logic, find where things are implemented, and understand dependencies in seconds.',
+      'Upload a ZIP of your codebase and instantly ask questions about the code. Navigate complex logic, find where things are implemented, and understand dependencies in seconds.',
     uploadCta: 'Upload Repository',
-    githubCta: 'Clone GitHub Repository',
   },
   ingest: {
     title: 'Index New Repository',
-    subtitle: 'Connect your codebase to start generating documentation.',
-    tabUpload: 'ZIP Upload',
-    tabGithub: 'GitHub URL',
+    subtitle: 'Upload your codebase to start generating documentation.',
     dropZoneTitle: 'Drop your ZIP here',
     dropZoneHint: 'Max file size 200MB. Only .zip archives supported.',
     selectFile: 'Select File',
