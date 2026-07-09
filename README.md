@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# DevDoc AI — Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite + TypeScript single-page app for DevDoc AI: upload or link a codebase, watch it get indexed, and chat with it with source citations.
 
-Currently, two official plugins are available:
+See [`SUBMISSION.md`](./SUBMISSION.md) for architecture and product decisions. See [`CLAUDE.md`](./CLAUDE.md) for the full project map (screens, components, models, Redux slices).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 20+
+- The [server](../server) running locally (or reachable at whatever URL you configure below)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup
 
-- Configure the top-level `parserOptions` property like this:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+2. Copy the env file:
+   ```bash
+   cp .env.example .env
+   ```
+   `VITE_API_URL` should point at the server's `/api/v1` base — default `http://localhost:5050/api/v1`.
+
+## Running
+
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Visit `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Scripts
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Dev server with HMR |
+| `npm run build` | Type-check (`tsc -b`) and production build |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | ESLint |
+
+## Notes
+
+- The app has 4 screens: landing (with a recent-repositories list), ingest (GitHub URL or ZIP upload), indexing status, and chat. Repository Dashboard, API Explorer, and Dependency Explorer were designed but deferred — see `SUBMISSION.md` section h.
+- All state shown is real backend data — no invented/mocked statistics.
